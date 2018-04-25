@@ -6,6 +6,17 @@ p.venue {
   margin-bottom: 1em;
 }
 
+.slide:not(.title) p {
+  color: white;
+  background: #453688;
+  padding: .2em .75em;
+  display: inline;
+  position: absolute;
+  right: 15px;
+  bottom: -25px;
+  font-style: italic;
+}
+
 .slide:after {
   position: absolute;
   top: 15px;
@@ -16,15 +27,14 @@ p.venue {
   background: #453688;
   opacity: .9;
   color: #FFF;
+  font-weight: bold;
   counter-increment: slide;
   content: counter(slide);
   text-align: center;
 }
-
 .slide.title:after {
   opacity: 0;
 }
-
 .shower.full .slide:not(.active) {
   display: block;
   margin-left: -150%;
