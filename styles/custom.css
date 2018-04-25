@@ -5,3 +5,28 @@ p.venue {
   font-style: italic;
   margin-bottom: 1em;
 }
+
+.slide:after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding-top: 3px;
+  width: 50px;
+  height: 50px;
+  background: #453688;
+  opacity: .9;
+  color: #FFF;
+  counter-increment: slide;
+  content: counter(slide);
+  text-align: center;
+}
+
+.slide.title:after {
+  opacity: 0;
+}
+
+.shower.full .slide:not(.active) {
+  display: block;
+  margin-left: -150%;
+  visibility: hidden;
+}
